@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
+
+:root {
+  --font-primary: "Bebas Neue", cursive !important;
+  --font-secondary: "Poppins", sans-serif !important;
+
+  --color-white: #fff;
+  --color-black: #000;
+  --color-gray: #a3a3a3;
+  --color-dark: #1d1e22;
+
+  --background-dark: #2c303a;
+
+  --color-success: #2fdb5f;
+  --color-warning: #f1c75d;
+  --color-error: #f77272;
+
+  --color-primary: #2fdbbc;
+  --color-primary-light: #67e5ce;
+  --color-primary-dark: #1eae94;
+
+  --color-secondary: #f99928;
+  --color-secondary-light: #faac52;
+  --color-secondary-dark: #df7b07;
+
+  --color-primary: #5ec576;
+  --color-secondary: #ffcb03;
+  --color-tertiary: #ff585f;
+  --color-primary-darker: #4bbb7d;
+  --color-secondary-darker: #ffbb00;
+  --color-tertiary-darker: #fd424b;
+  --color-primary-opacity: #5ec5763a;
+  --color-secondary-opacity: #ffcd0331;
+  --color-tertiary-opacity: #ff58602d;
+  --gradient-primary: linear-gradient(to top left, #39b385, #9be15d);
+  --gradient-secondary: linear-gradient(to top left, #ffb003, #ffcb03);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box !important;
+}
+
+html {
+  font-size: 62.5% !important;
+
+  body {
+    font-style: normal;
+    font-weight: 400;
+    font-family: var(--font-secondary) !important;
+
+    a {
+      cursor: pointer !important;
+      text-decoration: none;
+      transition: all 0.5s ease;
+    }
+
+    p {
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+
+    li {
+      list-style-type: none;
+    }
+
+    //  Typhography
+
+    h1 {
+      font-size: 6rem;
+      line-height: 3.2rem;
+      font-weight: 700;
+
+      @media screen and (max-width: 480px) {
+        font-size: 3rem;
+      }
+    }
+
+    h2 {
+      font-size: 3.4rem;
+      line-height: 3.8rem;
+    }
+
+    h3 {
+      font-size: 2.8rem;
+      line-height: 3.2rem;
+    }
+
+    h4 {
+      font-size: 2.2rem;
+      line-height: 2.4rem;
+    }
+
+    .text {
+      font-size: 1.8rem !important;
+      line-height: 2rem !important;
+      font-weight: 500 !important;
+      font-family: var(--font-secondary) !important;
+    }
+
+    label {
+      font-size: 2rem !important;
+    }
+
+    svg {
+      height: 3.2rem;
+      width: 3.2rem;
+    }
+
+    .highlight {
+      position: relative;
+
+      &::after {
+        display: block;
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+        opacity: 0.7;
+        transform: scale(1.07, 1.05) skewX(-15deg);
+        background-image: var(--gradient-secondary);
+      }
+    }
+  }
+}

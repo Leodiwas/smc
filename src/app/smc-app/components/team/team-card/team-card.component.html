@@ -1,0 +1,30 @@
+<div class="team_card-box d-flex justify-content-center align-items-center">
+  <div
+    class="team_card d-flex flex-column justify-content-center align-items-center"
+    *ngFor="let team of teams"
+  >
+    <figure>
+      <img class="img-fluid" [src]="team.imgPath" alt="team_image" />
+    </figure>
+    <h3 class="text-light">{{ team.name }}</h3>
+    <h2 [ngStyle]="{ color: team.job === 'Owner' ? '#fd424b' : '#ffcb03' }">
+      {{ team.job }}
+    </h2>
+    <div class="social_icons d-flex">
+      <a [href]="team.fb" target="_blank">
+        <svg class="svg_fb">
+          <use href="../../../../assets/icons/facebook.svg#fb"></use></svg
+      ></a>
+      <a [href]="team.tiktok" target="_blank">
+        <svg class="svg_tiktok">
+          <use href="../../../../assets/icons/tiktok.svg#tiktok"></use>
+        </svg>
+      </a>
+      <a [href]="team.gmail">
+        <svg class="svg_mail">
+          <use href="../../../../assets/icons/mail.svg#mail"></use>
+        </svg>
+      </a>
+    </div>
+  </div>
+</div>

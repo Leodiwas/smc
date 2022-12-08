@@ -1,0 +1,49 @@
+<nav class="navbar navbar-expand-lg">
+  <div class="container-fluid">
+    <a class="navbar-brand" [routerLink]="['/smc/home']"
+      >Samrat <span class="highlight">M_C</span></a
+    >
+    <button
+      class="navbar-toggler navbar_nav-toggler"
+      (click)="onToggle($event)"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a
+            [routerLink]="['/smc/home']"
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: true }"
+            >Home</a
+          >
+        </li>
+        <li class="nav-item">
+          <a [routerLink]="['/smc/gallery']" routerLinkActive="active"
+            >Gallery</a
+          >
+        </li>
+        <li class="nav-item">
+          <a [routerLink]="['/smc/services']" routerLinkActive="active"
+            >Services</a
+          >
+        </li>
+        <li class="nav-item">
+          <a [routerLink]="['/smc/team']" routerLinkActive="active">Team</a>
+        </li>
+        <li class="nav-item">
+          <a [routerLink]="['/smc/contact']" routerLinkActive="active"
+            >Contact</a
+          >
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

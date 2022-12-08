@@ -1,0 +1,15 @@
+<div *ngIf="!loader">
+  <app-loader></app-loader>
+</div>
+<div class="team">
+  <div class="row">
+    <div class="col-xl-12">
+      <h1 class="text-center text-light">Our Team</h1>
+    </div>
+  </div>
+  <div class="row" *ngIf="loader">
+    <div class="col-xl-12">
+      <team-card></team-card>
+    </div>
+  </div>
+</div>

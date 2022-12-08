@@ -1,0 +1,83 @@
+.team_card-box {
+  gap: 2rem;
+  flex-wrap: wrap;
+
+  @media screen and (max-width: 480px) {
+    gap: 1rem;
+  }
+
+  &:hover .team_card:not(:hover) {
+    transform: scale(0.9);
+  }
+
+  .team_card {
+    gap: 1rem;
+    width: 24rem;
+    padding: 1.4rem;
+    border-radius: 1rem;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.5s ease;
+    background-color: var(--background-dark);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+      rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+      rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
+    @media screen and (max-width: 480px) {
+      width: 18rem;
+    }
+
+    h2 {
+      @media screen and (max-width: 480px) {
+        font-size: 2.4rem;
+      }
+    }
+
+    h3 {
+      font-size: 2.4rem;
+
+      @media screen and (max-width: 480px) {
+        font-size: 2rem;
+      }
+    }
+
+    figure {
+      width: 80%;
+
+      @media screen and (max-width: 480px) {
+        width: 90%;
+      }
+
+      img {
+        transition: all 0.5s ease;
+        border-radius: 50%;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+          rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+          rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+      }
+    }
+
+    .social_icons {
+      gap: 1.6rem;
+    }
+
+    &:hover {
+      transform: scale(1);
+      box-shadow: rgb(255, 203, 3, 0.4) 0px 5px 15px;
+
+      img {
+        margin-bottom: 1rem;
+        border-radius: 1rem !important;
+        transform: scale(1.32);
+      }
+
+      .svg_fb {
+        use {
+          path {
+            fill: #4267b2 !important;
+          }
+        }
+      }
+    }
+  }
+}

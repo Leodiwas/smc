@@ -1,0 +1,22 @@
+<div *ngIf="!loader">
+  <app-loader></app-loader>
+</div>
+<div class="gallery">
+  <h1 class="text-center text-light">Gallery</h1>
+  <figure class="d-flex justify-content-center" *ngIf="loader">
+    <img
+      *ngFor="let img of pics"
+      [src]="img.image"
+      alt="gallery images"
+      class="img-fluid"
+      (click)="onGalleryBox(img.image)"
+    />
+  </figure>
+</div>
+<figure class="gallery_Big_Box" *ngIf="showImgBox">
+  <img [src]="img" alt="current img" />
+  <svg (click)="onBoxClose()">
+    <use href="../../../../assets/icons/close.svg#close"></use>
+  </svg>
+</figure>
+<div class="gallery_overlay" *ngIf="showOverlay" (click)="onBoxClose()"></div>

@@ -1,0 +1,131 @@
+.navbar {
+  position: relative;
+  z-index: 5;
+  margin: 2rem 0 4rem 0;
+
+  .container-fluid {
+    padding: 0 !important;
+  }
+
+  a {
+    font-size: 2rem;
+    color: var(--color-white);
+  }
+
+  &-nav {
+    gap: 3rem;
+    margin-left: auto;
+    margin-right: 0 !important;
+
+    @media screen and (max-width: 480px) {
+      gap: 1rem;
+    }
+  }
+
+  &-collapse {
+    ul {
+      @media screen and (max-width: 768px) {
+        width: 40%;
+        padding: 1rem;
+        margin-top: 2rem;
+        border-radius: 1rem;
+        background-image: linear-gradient(
+          rgb(255, 176, 5, 0.2),
+          rgb(255, 203, 3, 0.2)
+        );
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+          rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+          rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+      }
+
+      li {
+        a {
+          display: inline-block;
+
+          &::after {
+            content: "";
+            display: block;
+            height: 0.3rem;
+            width: 0%;
+            margin: auto;
+            margin-top: 0.2rem;
+            border-radius: 0.4rem;
+            transition: all 0.5s ease;
+            background-color: var(--color-secondary);
+          }
+
+          &:hover {
+            background-color: initial !important;
+          }
+
+          &:hover:after {
+            width: 100%;
+          }
+
+          &.active {
+            color: var(--color-secondary) !important;
+
+            &::after {
+              content: "";
+              display: block;
+              height: 0.3rem;
+              width: 100%;
+              margin: auto;
+              margin-top: 0.2rem;
+              border-radius: 0.4rem;
+              transition: all 0.5s ease;
+              background-color: var(--color-secondary);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &_nav-toggler {
+    position: relative;
+    z-index: 11;
+
+    border: none;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    background: transparent;
+
+    & span,
+    & span:before,
+    & span:after {
+      width: 28px;
+      height: 3px;
+      display: block;
+      border-radius: 0.6rem;
+      transition: 0.3s;
+      background-color: var(--color-secondary);
+    }
+
+    & span:before {
+      content: "";
+      transform: translateY(-0.9rem);
+    }
+
+    & span:after {
+      content: "";
+      transform: translateY(0.6rem);
+    }
+
+    &.toggler-open span {
+      background-color: transparent;
+    }
+
+    &.toggler-open span:before {
+      transform: translateY(0) rotate(45deg);
+    }
+
+    &.toggler-open span:after {
+      transform: translateY(-0.3rem) rotate(-45deg);
+    }
+  }
+
+  .navbar-toggler:focus {
+    box-shadow: none;
+  }
+}

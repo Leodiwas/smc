@@ -1,0 +1,19 @@
+<div *ngIf="!loader">
+  <app-loader></app-loader>
+</div>
+<div class="service">
+  <div class="row">
+    <div class="col-xl-12">
+      <h1 class="text-center text-light">Services</h1>
+    </div>
+  </div>
+  <div class="row" *ngIf="loader">
+    <div class="col-xl-12">
+      <div class="img_box d-flex justify-content-center align-items-center">
+        <figure *ngFor="let image of images">
+          <img [src]="image.img" alt="services_image" class="img-fluid" />
+        </figure>
+      </div>
+    </div>
+  </div>
+</div>
